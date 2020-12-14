@@ -25,5 +25,5 @@ else
     echo "No .mov files found"
 fi
 
-# Unset the variable  for bash behavior
+# Unset the variable for bash behavior
 shopt -u nullglob
