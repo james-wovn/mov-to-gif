@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set the variable for bash behavior
+shopt -s nullglob
+
 echo "Convert .mov files to .gif files"
 
 files=( "$MOV_FILE_PATH"/*.mov )
@@ -19,5 +22,8 @@ then
         rm "$file"
     done
 else
-    "No .mov files found"
+    echo "No .mov files found"
 fi
+
+# Unset the variable  for bash behavior
+shopt -u nullglob
